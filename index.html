@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rishabh Mishra Portfolio</title>
+
+    <title>Mohd Rizwan Khan Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -25,6 +26,215 @@
 
 
 <style>
+p strong {
+  display: inline-block;           /* Allows transform effects */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth scaling and color */
+  cursor: default;                 /* Normal pointer */
+  color: #888;                     /* Default muted silver-gray */
+}
+
+p strong:hover {
+  transform: scale(1.1);           /* Scale up by 10% */
+  color: silver;                   /* Silver highlight on hover */
+  text-shadow: 0 0 6px silver;    /* Optional soft silver glow */
+}
+
+	.big.big-2 {
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect: scale + change color */
+.big.big-2:hover {
+  color: #ff6e40;   
+     /* highlight color */
+  transform: scale(1.15); /* 10% bigger */
+}
+
+/* Base H2 Styling */
+h2.mb-4 {
+  transition: color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.3s ease,
+              border-radius 0.3s ease; /* smooth radius change too */
+  display: inline-block;   /* so border + glow wrap neatly */
+  padding: 6px 12px;
+  border-radius: 22px; 
+}
+
+/* Hover: color + silver glow + scale */
+h2.mb-4:hover {
+  color: rgb(254, 255, 255);                 /* highlight text color */
+  box-shadow: 0 0 15px 8px silver;/* silver glow */
+  border: 1px solid #ff6e40;       /* silver border */
+             /* animate to rounded corners */
+  transform: scale(1.12);         /* smooth scale */
+}
+
+
+	.col-md-6 {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  /* Optional: add some padding so glow doesn't get clipped */
+  padding: 15px;
+}
+
+/* Silver glow on hover */
+.col-md-6:hover,
+.col-md-6:focus {
+  box-shadow:
+    0 0 12px 4px #c0c0c0,
+    0 0 24px 8px #e0e0e0;
+  outline: none;
+}
+
+	/* Ensure image glows on hover/focus without affecting scale animation */
+/* Apply glow separately using box-shadow on a wrapper span */
+
+/* Wrap image inside a span to isolate glow *//* Applies to all <img> tags */
+img {
+  transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+  border-radius: 12px;
+}
+
+/* Scale and white glow on hover/focus */
+img:hover,
+img:focus {
+  transform: scale(1.08);
+  box-shadow: 0 0 8px 2px #fff, 0 0 16px 4px #fff;
+  z-index: 10;
+}
+
+/* Applies to elements with background-image (like .block-20, .blog-entry, etc.) */
+a.block-20,
+.blog-entry .block-20,
+.bg-image-container {
+  transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+  border-radius: 12px;
+}
+
+/* Scale and white glow on hover/focus */
+a.block-20:hover,
+a.block-20:focus,
+.blog-entry .block-20:hover,
+.blog-entry .block-20:focus,
+.bg-image-container:hover,
+.bg-image-container:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px 2px #fff, 0 0 16px 4px #fff;
+  z-index: 10;
+}
+#project-section a.block-20 > span {
+  display: block;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* The actual image inside the span keeps normal scale animation */
+#project-section a.block-20 > span > img {
+  width: 85%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+/* On hover of link, apply glowing box-shadow on the wrapper */
+#project-section a.block-20:hover > span,
+#project-section a.block-20:focus > span {
+  box-shadow:
+    0 0 8px 4px #c0c0c0,
+    0 0 15px 7px #d0d0d0,
+    0 0 22px 10px #e0e0e0;
+  z-index: 10;
+  transform: scale(1.05); /* scale glow border only, not image */
+}
+
+/* Optional: keep base styles for scale on image if needed */
+#project-section a.block-20:hover > span > img,
+#project-section a.block-20:focus > span > img {
+  transform: none; /* prevent scaling image if separate scaling applied */
+}
+
+.bg-image-container {
+  width: 37.33%;
+  max-width: 400px;
+  height: 87vh;
+  min-height: 400px;
+  background-image: url('images/bg_1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; /* Strict stretch */
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+  
+}
+
+/* Glow border and scale effect on hover/focus */
+.bg-image-container:hover,
+.bg-image-container:focus {
+  transform: scale(1.07);
+  box-shadow: 0 0 24px 6px #c0c0c0, 0 0 40px 16px #d8d8d8;
+  border-color: #c0c0c0;
+  filter: brightness(1.05);
+  z-index: 2;
+}
+
+
+/* On hover: scale up and add silver glow border */
+.bg-image-container:hover,
+.bg-image-container:focus {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 8px 2px #c0c0c0,
+    0 0 16px 4px #d0d0d0,
+    0 0 24px 8px #e0e0e0;
+  border-color: #c0c0c0;
+  filter: brightness(1.08);
+  z-index: 10;
+}
+
+	/* Scale and glow effect for boxes and footer social items */
+.contact-info .box,
+.ftco-footer-social li.ftco-animate,
+.ftco-footer-social li.normal-txt {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  color: #333;
+}
+
+.contact-info .box:hover,
+.contact-info .box:focus,
+.ftco-footer-social li.ftco-animate:hover,
+.ftco-footer-social li.ftco-animate:focus,
+.ftco-footer-social li.normal-txt:hover,
+.ftco-footer-social li.normal-txt:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 5px #ff6e40;
+  color: #ff6e40;
+  z-index: 14;
+}
+
+.ftco-footer-social li.ftco-animate {
+  transition: transform 0.12s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  color: #fff; /* Original color */
+}
+
+.ftco-footer-social li.ftco-animate:hover,
+.ftco-footer-social li.ftco-animate:focus {
+  transform: scale(2.6);
+  color: #def2fd; /* Glow text/icon color */
+  text-shadow: 0 0 8px #ff6e40, 0 0 12px #ff6e40, 0 0 16px #ff6e40;
+  box-shadow: 0 0 15px 5px #ff6e40; /* Glow around elements */
+  z-index: 14;
+}
 
 /*======================================
 //--//-->   ABOUT
@@ -42,18 +252,42 @@
 .about-mf .about-img img {
   margin-left: 10px;
 }
-
-
 .skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 10px;
+  height: 0.7rem;
+  background-color: #f4f4fb; /* Soft neutral background */
+  overflow: hidden;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  position: relative;
+  box-shadow: none;
+  border: 2px solid transparent; /* border for glow space */
 }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
+/* Scale and silver glowing border on hover/focus with quicker transition */
+.skill-mf .progress:hover,
+.skill-mf .progress:focus {
+  box-shadow:
+    0 0 15px 6px #c0c0c0,
+    0 0 30px 12px #e0e0e0;
+  border-color: #c0c0c0;
+  transform: scale(1.11);
+  z-index: 1;
+}
+
+/* Progress fill bar default */
+.skill-mf .progress-bar {
+  height: 0.6rem;
+  background-color: #ff6e40;
+  border-radius: 10px;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: none;
+}
+
+/* Keep fill bar stable; no scale or glow on it */
+.skill-mf .progress:hover .progress-bar,
+.skill-mf .progress:focus .progress-bar {
+  /* No changes—fill remains same on hover */
 }
 
 
@@ -68,17 +302,27 @@
   animation: typing 3s steps(20, end) infinite;
 }
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
+#typing-animation::after {
+  content: "|";                /* Cursor symbol */
+  position: absolute;
   top: 0;
-  left: 0;
-  width: 0;
+  right: 0;                   /* Cursor on the right edge of the text */
+  width: 1ch;
   height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
+  color: #ccc;                /* Cursor color */
+  animation: typing-cursor 0.7s steps(1) infinite;
+  opacity: 1;
+  text-shadow:               /* Glow effect */
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #0ff,
+    0 0 30px #0ff,
+    0 0 40px #0ff,
+    0 0 50px #0ff,
+    0 0 60px #0ff;
 }
 
+/* Typing animation keyframes */
 @keyframes typing {
   from {
     width: 0;
@@ -88,15 +332,11 @@
   }
 }
 
+/* Cursor blinking and opacity animation */
 @keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
-
 
 /* project image zoom effect */
 
@@ -114,204 +354,655 @@
 
 
   </head>
+  
+  <!-- Other head content and CSS links -->
+  <style>
+	#ftco-navbar .nav-link,
+#ftco-navbar .navbar-brand {
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease;
+  color: #fff; /* Original text color */
+}
+
+/* Silver glow and proper scaling on hover/focus */
+#ftco-navbar .nav-link:hover,
+#ftco-navbar .nav-link:focus,
+#ftco-navbar .navbar-brand:hover,
+#ftco-navbar .navbar-brand:focus {
+  color: #c0c0c0; /* Silver text color */
+  transform: scale(1.70); /* Consistent scale */
+  text-shadow: 0 0 8px #c0c0c0, 0 0 12px #d0d0d0, 0 0 18px #e0e0e0; /* Silver glow */
+  box-shadow: 0 0 8px 2px #c0c0c0; /* Optional: subtle silver box glow */
+  z-index: 10;
+}
+
+	#ftco-navbar .navbar-brand {
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff; /* original color */
+}
+/* Strict silver glow only on edges of project images on hover/focus */
+#project-section a.block-20:hover > img,
+#project-section a.block-20:focus > img {
+  filter:
+    drop-shadow(0 0 4px #c0c0c0)
+    drop-shadow(0 0 6px #d0d0d0)
+    drop-shadow(0 0 8px #e0e0e0);
+  transition: filter 0.3s ease;
+}
+
+/* Normal state transition for smoothness */
+#project-section a.block-20 > img {
+  transition: filter 0.3s ease;
+  /* no scaling or transform */
+}
+
+#ftco-navbar .navbar-brand:hover,
+#ftco-navbar .navbar-brand:focus {
+  color:#c0c0c0; /* glow color */
+  border-radius: 24px;
+  transform: scale(1.33); /* scale up */
+  box-shadow: 0 0 8px 2px #ff6e40; /* glow effect */
+  z-index: 14;
+}
+
+    /* Add the hover scale and glow effect CSS here */
+    #ftco-navbar .nav-link {
+      position: relative;
+      transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      color: #c0c0c0;
+	   border-radius: 24px;
+    }
+
+    #ftco-navbar .nav-link:hover,
+    #ftco-navbar .nav-link:focus {
+      color:#fff;
+      transform: scale(1.12);
+      box-shadow: 0 0 8px 2px #ff6e40;
+      z-index: 10;
+	
+    }
+	
+  </style>
+
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Rishabh Mishra</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+	 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+  <div class="container">
+<!-- Navbar Brand Link with ID for animation -->
+<a id="navbar-brand" class="navbar-brand" href="index.html" style="font-size: 2rem; font-weight: bold;">Mohd Rizwan Khan</a>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Rishabh Mishra</span></h1>
+<!-- GSAP Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+<!-- Animation Script -->
+<script>
+  // GSAP timeline for smooth floating and scaling animation
+  const brandTimeline = gsap.timeline({ repeat: -1, yoyo: true, defaults: { duration: 1.5, ease: "power1.inOut" } });
 
-						<script>
+  // Vertical float and scale up/down
+  brandTimeline.to("#navbar-brand", { y: 8, scale: 1.08 })
+               .to("#navbar-brand", { y: 0, scale: 1 });
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Engineer  ',
-						'YouTuber  ',
-						'Teacher   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>A Senior Data Analyst</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.youtube.com/@RishabhMishraOfficial" class="btn btn-primary py-3 px-4">YouTube</a> 
-							<a href="https://github.com/rishabhnmishra" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
+  // Glowing text shadow animation synced with float effect
+  gsap.to("#navbar-brand", {
+    textShadow: "0 0 12px #ff6e40, 0 0 24px #ff6e40, 0 0 36px #ff6e40",
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+    duration: 1.5
+  });
+</script>
+    <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
+    type="button"
+    data-toggle="collapse"
+    data-target="#ftco-nav"
+    aria-controls="ftco-nav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    style="background: transparent !important; border: none !important; box-shadow: none !important; outline: none !important;">
+    <span class="oi oi-menu"></span> Menu
+</button>
 
 
+	
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Rishabh Mishra</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p>
-										<p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>With over 5 years of comprehensive experience in the field of data science & analytics, accompanied by a bachelor's degree in engineering. 
-									Proficient in data analysis, statistical analysis, hypothesis testing, customer behaviour analysis, &amp; machine learning. 
-									Demonstrated success in leading impactful projects and providing effective mentorship.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>
-									
-								</ul>
-							</div>
-						</div>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav nav ml-auto">
+        <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+        <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+        <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+        <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+        <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <style>.navbar-toggler {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}/* Kill background on ALL navbar togglers everywhere */
+button.navbar-toggler,
+.navbar-toggler,
+.navbar-dark .navbar-toggler,
+.navbar-light .navbar-toggler {
+  background-color: transparent !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
 
 
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="30">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/rishabhnmishra/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
+	 /* Strictly force transparent navbar-toggler */
+.navbar-toggler {
+  background: none !important;       /* kill all backgrounds */
+  background-color: transparent !important; 
+  border: none !important;           /* remove border */
+  box-shadow: none !important;       /* remove box shadow */
+  outline: none !important;          /* remove default focus style */
+}
+
+/* Also override theme-specific (navbar-dark / navbar-light) */
+.navbar-dark .navbar-toggler,
+.navbar-light .navbar-toggler {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+	/* Base navbar link styles with smooth transition */
+#ftco-nav .nav-link {
+  color: #ffffff; /* default color */
+  transition: color 0.3s ease, text-shadow 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+/* Silver glow effect on hover and focus */
+#ftco-nav .nav-link:hover,
+#ftco-nav .nav-link:focus {
+  color: #c0c0c0 !important;
+  text-shadow:
+    0 0 8px #c0c0c0,
+    0 0 16px #e0e0e0;
+  opacity: 1;
+  outline: none;
+}
+
+/* Transparent effect on active/selected/clicked link */
+/* Use :active for mouse click and .active class for current page */
+#ftco-nav .nav-link:active,
+#ftco-nav .nav-link.active {
+  opacity: 0.5;
+  color: #c0c0c0 !important;
+  text-shadow: none;
+  outline: none;
+}
+
+  #home-section.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+/* Home Slider Container */
+.home-slider.owl-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* centers */
+}
+
+/* Each Slider Item */
+.slider-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Overlay Layer (fully transparent here) */
+.slider-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent; /* see-through */
+  z-index: 5;
+}
+
+/* General Container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box; /* helps with responsiveness */
+}
+
+/* Row Adjustments */
+.row.d-md-flex.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Remove column padding in no-gutters rows */
+.row.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+  .one-third.js-fullheight.img {
+    width: 33.33%;
+    max-width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .one-third.js-fullheight.img > .overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    z-index: 1;
+  }
+
+  .one-forth.d-flex.align-items-center.ftco-animate {
+    width: calc(66.66% - 30px);
+    padding-left: 30px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .one-third.js-fullheight.img,
+    .one-forth.d-flex.align-items-center.ftco-animate {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+</style>
+
+<style>
+  /* Reset and containment */
+  #home-section.hero {
+    padding-top: 10px; /* Adjusted to lift closer to header */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home-slider.owl-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .slider-item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .slider-item .overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    z-index: 5;
+  }
+
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .row.d-md-flex.no-gutters {
+    margin: 0;
+  }
+
+  .row.no-gutters > [class*="col-"] {
+    padding: 0;
+  }
+@media (min-width: 992px) {
+  .bg-image-container {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 20px 8px rgba(255, 110, 64, 0.6);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  .bg-image-container:hover,
+  .bg-image-container:focus {
+    transform: scale(1.07);
+    border-color: #ff6e40;
+    box-shadow:
+      0 0 30px 12px #ff6e40,
+      0 0 60px 24px rgba(255, 110, 64, 0.9);
+    animation: none; /* stop pulse animation on hover/focus */
+    outline: none;
+  }
+
+  /* Glow pulse keyframes */
+  @keyframes glowPulse {
+    0%, 100% {
+      box-shadow: 0 0 20px 8px rgba(255, 110, 64, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 30px 12px rgba(255, 110, 64, 0.9);
+    }
+  }
+}
+
+  .bg-image-container {
+    width: 37.33%;
+    max-width: 400px;
+    height: 87vh; /* Increased height */
+    min-height: 400px;
+    background-image: url('images/bg_1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; /* Strict stretch: no cut or hide */
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    flex-shrink: 0;
+
+  }
+
+  .bg-image-container:hover,
+  .bg-image-container:focus {
+    transform: scale(1.05); /* Slight scale up */
+    box-shadow: 0 0 20px 6px #ff6e40; /* Glow effect around container */
+    filter: brightness(1.1); /* Brighten the image a bit */
+  }
+
+  .bg-image-container .overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    z-index: 3;
+  }
+
+  .one-forth.d-flex.align-items-center.ftco-animate {
+    width: calc(66.66% - 35px);
+    padding-left: 35px;
 
 
+
+  .one-forth.d-flex.align-items-center.ftco-animate:hover,
+  .one-forth.d-flex.align-items-center.ftco-animate:focus {
+    transform: scale(1.05);
+    text-shadow: 0 0 12px #ff6e40, 0 0 18px #ff6e40, 0 0 24px #ff6e40;
+  }
+
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .bg-image-container,
+    .one-forth.d-flex.align-items-center.ftco-animate {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      padding-left: 0;
+      margin-bottom: 20px;
+      background-size: cover; /* Keep aspect ratio on small screens */
+      cursor: default; /* revert to default pointer on small devices */
+      transform: none !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+  }
+</style>
+
+<section id="home-section" class="hero">
+  <div class="home-slider owl-carousel">
+    <div class="slider-item">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+          
+          <div class="bg-image-container">
+            <div class="overlay"></div>
+          </div>
+          
+          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <div class="text">
+              <span class="subheading">Hello!</span>
+              <h1 class="mb-4 mt-3">I'm <span>Mohd Rizwan Khan</span></h1>
+              
+              <!-- Typing Animation -->
+              <span id="typing-animation"></span>
+              <script>
+                const typingAnimationElement = document.getElementById('typing-animation');
+                const typingTexts = [
+                  'Data Analyst',
+                  'Excel Guru',
+                  'Power BI Specialist',
+                  'SQL Expert',
+                  'Python Enthusiast'
+                ];
+                function playTypingAnimation(text) {
+                  for (let i = 0; i < text.length; i++) {
+                    setTimeout(() => {
+                      typingAnimationElement.textContent += text[i];
+                    }, i * 200);
+                  }
+                  setTimeout(() => {
+                    typingAnimationElement.textContent = '';
+                    playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                  }, text.length * 200);
+                }
+                playTypingAnimation(typingTexts[0]);
+              </script>
+              
+              <br><br>
+              <h2>An Expert Data Analyst</h2>
+              <p>
+                <a href="Resume.pdf" download class="btn btn-primary py-3 px-4 btn-glow">Resume</a>
+                <a href="https://github.com/mohdrizwankhan3333" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4 btn-glow">My works</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Ensure links are clickable and provide smooth, subtle glow on hover */
+  a.btn-glow {
+    margin: 5px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: 
+      box-shadow 0.4s cubic-bezier(.4, 0, .2, 1),
+      color 0.4s ease,
+      background-color 0.4s ease,
+      transform 0.4s cubic-bezier(.4, 0, .2, 1);
+    z-index: 1;
+    pointer-events: auto;
+    text-decoration: none;
+  }
+  a.btn-glow:hover,
+  a.btn-glow:focus {
+    transform: scale(1.06);
+    box-shadow:
+      0 0 8px 3px #c0c0c0,
+      0 0 16px 6px #e0e0e0;
+    color: #c0c0c0 !important;
+    background-color: #222 !important; /* Optional: darken for contrast */
+    outline: none;
+    text-decoration: none;
+  }
+</style>
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <div class="container">
+    <div class="row d-flex align-items-stretch">
+
+      <!-- Left Column (Profile + Skills) -->
+      <div class="col-md-6 col-lg-5 d-flex">
+        <div class="img-about img d-flex align-items-stretch">
+          <div class="overlay">
+
+            <!-- Profile Info -->
+            <div class="row">
+              <div class="col-sm-6 col-md-5">
+                <div class="about-img">
+                  <img src="images/about_me.jpg" class="img-fluid rounded b-shadow-a" alt="Profile Image">
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-7">
+                <div class="about-info">
+                  <p><span class="title-s">Name:</span> <strong>Mohd Rizwan Khan</strong></p>
+                  <p><span class="title-s">Job Role:</span> <strong>Data Analyst Intern</strong></p>
+                  <p><span class="title-s">Experience:</span> <strong>Six Months</strong></p>
+                  <p><span class="title-s">Address:</span> <strong>Delhi, India</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skill-mf mt-3">
+              <p class="title-s">Skills</p>
+
+              <span>Advanced Excel</span> <span class="pull-right">95%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <span>SQL</span> <span class="pull-right">85%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <span>Power BI</span> <span class="pull-right">90%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <span>Python</span> <span class="pull-right">85%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <span>Statistical Analysis</span> <span class="pull-right">80%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+			  <span>Critical Thinking</span> <span class="pull-right">85%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column (About Content) -->
+      <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+        <div class="row justify-content-start pb-3">
+          <div class="col-md-12 heading-section ftco-animate">
+
+            <h1 class="big">About</h1>
+            <h2 class="mb-4">About Me</h2>
+
+            <p>
+              Completed 6 months of intensive experience as a <strong>Data Analyst Intern</strong> at
+              NA-SA Informatics Group, supported by a <strong>Bachelor’s degree in Engineering</strong>.  
+              Skilled in <strong>data analysis, visualization, and insight generation</strong> with a strong
+              commitment to <strong>data quality and precision</strong>.  
+              Successfully delivered <strong>50+ dynamic dashboards</strong>, driving clarity, 
+              efficiency, and actionable decision-making.
+            </p>
+
+            <!-- About Info List -->
+            <ul class="about-info mt-4 px-md-0 px-2">
+              <li class="d-flex"><span class="title-s">Profile:</span> <strong>Data Analytics &amp; Business Analytics</strong></li>
+              <li class="d-flex"><span class="title-s">Domain:</span> <strong>Retail, E-commerce, BFSI &amp; Digital Marketing</strong></li>
+              <li class="d-flex"><span class="title-s">Education:</span> <strong>Pursuing Bachelor of Engineering</strong></li>
+              <li class="d-flex"><span class="title-s">Languages:</span> <strong>English, Hindi, Urdu</strong></li>
+              <li class="d-flex"><span class="title-s">BI Tools:</span> <strong>Microsoft Power BI &amp; Tableau</strong></li>
+              <li class="d-flex"><span class="title-s">Other Skills:</span> <strong>Excel, Git, JIRA, Google Analytics</strong></li>
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- Projects Counter + LinkedIn -->
+        <div class="counter-wrap ftco-animate d-flex mt-md-3">
+          <div class="text">
+            <p class="mb-4">
+              <span class="number" data-number="50">0</span><span>+</span>
+              <span>&nbsp; Projects completed</span>
+            </p>
+
+            <p>
+              <a href="https://www.linkedin.com/in/mohdrizwankhan01/" target="_blank"
+                 class="btn btn-primary py-3 px-3">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>.btn.btn-primary.py-3.px-3 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect: scale + subtle white glow + border */
+.btn.btn-primary.py-3.px-3:hover {
+  border: 2px solid #ff6e40;           /* Optional: contrasting border */
+  transform: scale(1.18);               /* Scale up 15% */
+  box-shadow: 0 0 12px 5px rgba(248, 248, 248, 0.7); /* subtle white glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.btn.btn-primary.py-3.px-3 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.big-4 {
+  transition: transform 0.3s ease, font-weight 0.3s ease;
+  cursor: pointer;          /* shows it’s interactive */
+  font-weight: 600;         /* normal weight */
+}
+
+/* Hover: scale up and bold */
+.big-4:hover {
+  transform: scale(1.14);    /* scale up 10% */
+  font-weight: 900; 
+  color: #ff6e40;        /* bolder */
+}
+
+</style>
 
 	
     <section class="ftco-section ftco-no-pb" id="resume-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Seasoned Senior Data Analyst with 5+ years of experience driving business strategies through data-driven insights. Proven expertise in data science, statistical analysis, machine learning algorithms and project management.</p>
+      <h1 class="big big-2">Resume</h1>
+<a href="Resume.pdf" download>
+  <h2 class="big big-2">Resume</h2>
+</a>
+
+<p>
+  <strong>Data Analyst</strong> with <strong>6 months of experience</strong> at <strong>NA-SA Informatics Group</strong>, specializing in <strong>data visualization and reporting</strong>. Skilled in <strong>SQL, Excel, Power BI, and Python</strong>, with a strong focus on <strong>data quality</strong> and <strong>actionable insights</strong>. Delivered <strong>50+ interactive dashboards</strong> supporting decision-making.
+</p>
           </div>
         </div>
 
@@ -324,15 +1015,17 @@
 		<div class="row">
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
-						<span class="date">2021-Present</span>
-						<h2>Senior Data Analyst</h2>
-						<span class="position">Merkle</span>
-						<p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International. 
+						<span class="date">December'24 - May'2025</span>
+						<h2>Data Analyst Intern</h2>
+						<span class="position">NA-SA Informatics Group</span>
+<p class="mt-4">NA-SA Informatics, a global STARLIMS implementation partner with 90+ successful projects across industries worldwide.</p>
 							<ul>
-								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
-								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
-								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
-							</ul>
+  <li>Worked on data cleaning, transformation, and validation to ensure accuracy and
+	
+  <li>Designed and developed interactive dashboards in Power BI and Excel to monitor KPIs and support decision-making.</li>
+  <li>Performed data analysis using SQL and Python, generating actionable insights that improved reporting efficiency for clients.</li>
+</ul>
+
 						</p>
 					</div>
 
@@ -340,16 +1033,18 @@
 
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
-						<span class="date">2018-2021</span>
-						<h2>Senior Data Analyst</h2>
-						<span class="position">iQuanti</span>
-						<p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands. 
-							<ul>
-								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
-								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
-								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
-							</ul>
-						</p>
+						<span class="date">Jun'2024 - July'24</span>
+						<h2>Web-Dev Intern</h2>
+						<span class="position">Upstairs Applied Tech Pvt. Ltd.</span>
+						<p class="mt-4">Completed Frontend Development Internship, contributing to building responsive and user-friendly web applications. 
+  <ul>
+	
+    <li>Developed and optimized web pages using HTML, CSS, and JavaScript, improving site performance and usability.</li>
+    <li>Collaborated with designers and backend teams to implement interactive UI components and ensure seamless integration.</li>
+    <li>Worked with frameworks like React and Bootstrap to enhance functionality and deliver modern, scalable solutions.</li>
+  </ul>
+</p>
+
 					</div>
 
 				</div>
@@ -365,75 +1060,79 @@
 		<br>
 		
 			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2014-2018</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">Visvesvaraya Technological University</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-    			</div>
+    			
 
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
-    					<span class="date">2012-2013</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">Army Public School</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
+  <span class="date">2025 - 2028</span>
+  <h2>B.Tech in Computer Engineering</h2>
+  <span class="position">Abdul Kalam Technical University</span>
+  <p class="mt-4">Pursuing degree with First Division (Distinction track).</p>
+</div>
+
 				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2025</span>
+    					<h2>Diploma In Computer Engineering</h2>
+    					<span class="position">Jamia Millia Islamia (a centeral university)</span>
+    					<p class="mt-4">Division First with distinction.</p>
+    				</div>
     			</div>
     		</div>
+
+    		
     	</div>
     </section>
 
    
-
+<style>.resume-wrap {
+  padding: 20px;             /* adds space inside the box */
+  border-radius: 12px;       /* rounds the corners */
+  /* optional: light background for emphasis */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional subtle shadow */
+}
+</style>
     <section class="ftco-section" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & Excel.</p>
           </div>
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              <a href="https://github.com/mohdrizwankhan3333/Projects__PBI" class="block-20 zoom-effect" style="background-image: url('images/sales.webp');">
               </a>
               <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql">Digital Music Store Data Analysis using SQL</a></h3>
-                <p>Analyzed music store data using advanced SQL queires to identify gaps and increase the business growth.</p>
+                <h3 class="heading"><a href="https://github.com/mohdrizwankhan3333/Projects__PBI">Sales & Revenue Dashboard using Power BI</a></h3>
+                <p>Created interactive dashboards to analyze sales trends, customer segments, and revenue growth opportunities.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              <a href="https://github.com/mohdrizwankhan3333/Projects__PBI" class="block-20 zoom-effect" style="background-image: url('images/churn.webp');">
               </a>
               <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb">Data Analysis using Python Project for Beginners</a></h3>
-                <p>Performed exploratory data analysis on diwali sales data using Python to improve the customer experience.</p>
+                <h3 class="heading"><a href="https://github.com/mohdrizwankhan3333/Python_Projects_DA">Customer Churn Prediction using Python</a></h3>
+                <p>Built predictive models to identify churn risk and recommended retention strategies from telecom data.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry">
-              <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              <a href="https://github.com/mohdrizwankhan3333/Python_Projects_DA" class="block-20 zoom-effect" style="background-image: url('images/marketing.webp');">
               </a>
               <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg">Power BI Sales dashboard Project for Beginners</a></h3>
-                <p>Designed a power bi dashboard for Madhav Store to track and analyze the online sales data acorss India.</p>
+                <h3 class="heading"><a href="https://github.com/mohdrizwankhan3333/Python_Projects_DA">Marketing Campaign Analysis with SQL & Excel</a></h3>
+                <p>Analyzed campaign data to measure ROI, track engagement, and optimize future marketing spend.</p>
               </div>
             </div>
           </div>
@@ -443,83 +1142,29 @@
 		<div class="row d-flex justify-content-center">  
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				<a href="https://github.com/mohdrizwankhan3333/Excel_Projects" class="block-20 zoom-effect" style="background-image: url('images/e\ commerce.webp');">
 				</a>
 				<div class="text mt-3 float-right d-block">
   
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast- Time Series Forecasting</a></h3>
-				  <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+				  <h3 class="heading"><a href="https://github.com/mohdrizwankhan3333/Excel_Projects">E-commerce Product Performance Analysis</a></h3>
+				  <p>Explored retail datasets to identify top products, seasonal trends, and underperforming categories.</p>
 				</div>
 			  </div>
 			</div>
 			<div class="col-md-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				<a href="https://github.com/mohdrizwankhan3333/Projects__PBI" class="block-20 zoom-effect" style="background-image: url('images/forcast.webp');">
 				</a>
 				<div class="text mt-3 float-right d-block">
   
-				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer Segmentation using clustering model</a></h3>
-				  <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p>
+				  <h3 class="heading"><a href="https://github.com/mohdrizwankhan3333/Projects__PBI">Financial Forecasting with Time Series Models</a></h3>
+				  <p>Developed forecasting dashboards in Power BI to predict revenue trends and guide business planning.</p>
 				</div>
 			  </div>
 			</div>
 		 </div>
 	  </div>
     </section>
-
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="30">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="500">0</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/rishabhnmishra" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
-
 
 
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
@@ -539,7 +1184,7 @@
           			<span class="icon-map-signs"></span>
           		</div>
           		<h3 class="mb-4">Address</h3>
-	            <p>Bengaluru, India</p>
+	            <p><a href="#">Delhi, India</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -548,7 +1193,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+ 0 101 0101 101</a></p>
+<p><a href="tel:+919045386853">+91 9045386853</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -557,7 +1202,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">conctact@domainname.com</a></p>
+<p><a href="mailto:rizwanm2648@gmail.com">rizwanm2648@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -566,27 +1211,28 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
+				    				<p><a href="Resume.pdf">resumelink</a></p>
+
+             
 	          </div>
           </div>
 
 		  <div class="container">
+			
 			<br>
 			<br>
 			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				<div class="col-md-7 ftco-animate text-center" style="">
 				</div>
 			</div>
 				<br>
 					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rishabhnmishra/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li>
-					</ul>
+  <li class="ftco-animate normal-txt">Find me on  </li>
+  <li class="ftco-animate"><a href="https://www.linkedin.com/in/mohdrizwankhan01/"><span class="icon-linkedin"></span></a></li>  
+  <li class="ftco-animate"><a href="https://github.com/mohdrizwankhan3333"><span class="icon-github"></span></a></li>
+  <li class="ftco-animate"><a href="https://www.instagram.com/mohdrizwankhan97/"><span class="icon-instagram"></span></a></li>
+</ul>
+
 				<br>
 		   </div>
    </div>
@@ -601,15 +1247,69 @@
 			<div class="col-md-12 text-center">
   
 			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is made with <i class="icon-heart color-danger" aria-hidden="true"></i>  by <a href="https://colorlib.com" target="_blank"> Mohd Rizwan Khan</a>
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 			</div>
 		  </div>
 		</div>
 	  </footer>
+<style>@media (max-width: 991.98px) {
+  #ftco-navbar .navbar-collapse {
+    background: rgba(0, 0, 0, 0.5) !important; /* mid black transparent background */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    padding: 8px 0;
+    border: none;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    display: flex !important;
+    justify-content: center;
+  }
 
+  #ftco-navbar .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important; /* inline horizontal */
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    width: 100%;               /* full width for even spacing */
+    justify-content: space-evenly; /* evenly space items */
+  }
 
-  <!-- loader -->
+  #ftco-navbar .nav-item {
+    margin: 0;
+    padding: 0;
+    flex-grow: 0;             /* prevent stretching */
+  }
+
+  #ftco-navbar .nav-link {
+    padding: 6px 8px;           /* small padding */
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff !important;
+    border: none;               /* remove borders */
+    background: transparent;
+    text-shadow: none;
+    transition: color 0.2s ease; /* only color transition */
+    transform: none;            /* reset scale */
+  }
+
+  #ftco-navbar .nav-link:hover,
+  #ftco-navbar .nav-link:focus {
+    color: #ff6e40 !important;
+    text-shadow: 0 0 6px #ff6e40;
+    outline: none;
+    transform: scale(1.15);     /* instant scale on hover/focus */
+  }
+
+  .navbar-toggler {
+    display: none; /* hide toggler */
+  }
+}
+</style>
+
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
@@ -630,3 +1330,291 @@
     
   </body>
 </html>
+
+<style>
+/* Add this at the end of your <style> section for a star-shaped cursor with shadow everywhere */
+
+
+
+/* Responsive fix for hero image and text on mobile */
+@media (max-width: 768px) {
+  .home-slider.owl-carousel,
+  .slider-item,
+  #home-section.hero {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    min-height: unset !important;
+  }
+  .bg-image-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 220px !important;
+    min-height: 120px !important;
+    margin-bottom: 16px !important;
+    background-size: cover !important;
+    border-radius: 10px !important;
+  }
+  .one-forth.d-flex.align-items-center.ftco-animate {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+  }
+  .one-forth .text {
+    padding: 0 10px !important;
+    text-align: center !important;
+  }
+  .one-forth .text h1,
+  .one-forth .text h2,
+  .one-forth .text span,
+  .one-forth .text #typing-animation {
+    font-size: 1.5rem !important;
+    word-break: break-word !important;
+  }
+  .one-forth .text h1 span {
+    display: inline !important;
+    font-size: 1.5rem !important;
+  }
+}
+/* Hide hero image on mobile and set solid circular cursor with shadow */
+@media (max-width: 768px) {
+  .bg-image-container {
+	display: none !important;
+  }
+}
+
+/* Hide hero image (bg-image-container) on mobile */
+@media (max-width: 768px) {
+  .bg-image-container {
+    display: none !important;
+  }
+}
+</style>
+
+<style>
+/* --- Place this at the end of your <style> section --- */
+
+/* Solid circular cursor with SILVER shadow for all devices */
+
+/* Different color for the name 'Mohd Rizwan Khan' in hero section */
+.one-forth .text h1 span {
+  color: #ff6e40 !important; /* Use your preferred highlight color */
+  text-shadow: 0 0 8px #c0c0c0, 0 0 16px #e0e0e0;
+}
+
+/* Responsive: Increase about/profile image size with scale/glow on hover for mobile */
+@media (max-width: 768px) {
+  .about-img img.img-fluid.rounded.b-shadow-a {
+    width: 210px !important;      /* increased width */
+    height: 310px !important;     /* increased height */
+    max-width: 70vw !important;   /* increased max-width */
+    max-height: 86vw !important;  /* increased max-height */
+    display: block;
+    margin: 0 auto 12px auto;
+    border-radius: 12px !important; /* rounded corners */
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .about-img img.img-fluid.rounded.b-shadow-a:hover,
+  .about-img img.img-fluid.rounded.b-shadow-a:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 6px #c0c0c0;
+    outline: none;
+  }
+
+  /* Hide hero image (bg-image-container) on mobile */
+  .bg-image-container {
+    display: none !important;
+  }
+}
+
+/* Scale and silver glow on hover/focus (all devices) */
+.about-img img.img-fluid.rounded.b-shadow-a:hover,
+.about-img img.img-fluid.rounded.b-shadow-a:focus {
+  transform: scale(1.08);
+  box-shadow: 0 0 12px 4px #c0c0c0, 0 0 24px 8px #e0e0e0;
+  z-index: 10;
+}
+/* ================================
+   General Fixes & Responsive Fixes
+   ================================ */
+
+/* Ensure no duplicate nav wrappers and consistent IDs in HTML */
+
+/* Responsive: bg-image-container visible on mobile with adjusted size and styling */
+@media (max-width: 768px) {
+  .bg-image-container {
+    display: block !important; /* Show on mobile */
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 220px !important;
+    min-height: 120px !important;
+    margin-bottom: 16px !important;
+    background-size: cover !important; /* Keep aspect ratio */
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 15px 6px #c0c0c0; /* subtle silver glow */
+    filter: brightness(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    position: relative;
+  }
+}
+
+/* Preserve desktop hover glow and scale on .bg-image-container */
+.bg-image-container {
+  width: 37.33%;
+  max-width: 400px;
+  height: 87vh;
+  min-height: 400px;
+  background-image: url('images/bg_1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%; /* strict stretch */
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+  border: 2px solid transparent;
+  cursor: url('data:image/svg+xml;utf8,<svg height="32" width="32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="14" stroke="%23ff6e40" stroke-width="2" fill="none"/></svg>') 16 16, auto;
+  transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s, filter 0.3s, border-color 0.3s;
+}
+.bg-image-container:hover,
+.bg-image-container:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 6px #ff6e40;
+  filter: brightness(1.1);
+  border-color: #ff6e40;
+  z-index: 10;
+}
+
+/* About/profile image: increase size, keep scale/glow on hover for mobile */
+@media (max-width: 768px) {
+  .about-img img.img-fluid.rounded.b-shadow-a {
+    width: 210px !important;
+    height: 310px !important;
+    max-width: 70vw !important;
+    max-height: 86vw !important;
+    display: block;
+    margin: 0 auto 12px auto;
+    border-radius: 12px !important;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .about-img img.img-fluid.rounded.b-shadow-a:hover,
+  .about-img img.img-fluid.rounded.b-shadow-a:focus {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 6px #c0c0c0;
+    outline: none;
+  }
+}
+
+/* General image hover glow and scale */
+img {
+  transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+  border-radius: 12px;
+}
+img:hover,
+img:focus {
+  transform: scale(1.08);
+  box-shadow: 0 0 8px 2px #fff, 0 0 16px 4px #fff;
+  z-index: 10;
+}
+
+/* Project images: strict silver glow on hover/focus */
+#project-section a.block-20 > img:hover,
+#project-section a.block-20 > img:focus {
+  filter:
+    drop-shadow(0 0 4px #c0c0c0)
+    drop-shadow(0 0 6px #d0d0d0)
+    drop-shadow(0 0 8px #e0e0e0);
+  transition: filter 0.3s ease;
+}
+
+/* Navbar items glow on hover/focus with silver glow and scale */
+#ftco-navbar .nav-link,
+#ftco-navbar .navbar-brand {
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+  color: #fff;
+}
+
+#ftco-navbar .nav-link:hover,
+#ftco-navbar .nav-link:focus,
+#ftco-navbar .navbar-brand:hover,
+#ftco-navbar .navbar-brand:focus {
+  color: #c0c0c0;
+  transform: scale(1.12);
+  text-shadow: 0 0 8px #c0c0c0, 0 0 12px #d0d0d0, 0 0 18px #e0e0e0;
+  box-shadow: 0 0 8px 2px #c0c0c0;
+  z-index: 10;
+}
+
+/* Responsive hero text scaling */
+@media (max-width: 768px) {
+  .one-forth .text h1,
+  .one-forth .text h2,
+  .one-forth .text span,
+  .one-forth .text #typing-animation {
+    font-size: 1.5rem !important;
+    word-break: break-word !important;
+  }
+  .one-forth .text h1 span {
+    font-size: 1.5rem !important;
+    display: inline !important;
+  }
+}
+
+
+
+/* Additional minor fixes */
+/* Avoid hiding .bg-image-container on mobile */
+@media (max-width: 768px) {
+  .bg-image-container {
+    display: block !important;
+  }
+}
+/* Make sure .bg-image-container is fully visible on mobile */
+
+/* Override any previous hide */
+@media (max-width: 768px) {
+  .bg-image-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important; /* allow dynamic height for full visibility */
+    min-height: 330px !important; /* minimum height to maintain presence */
+    margin-bottom: 16px !important;
+    background-size: contain !important; /* contain to fit entire image inside */
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 15px 6px #c0c0c0; /* subtle silver glow */
+    filter: brightness(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    position: relative;
+  }
+}
+/* Place this at the very end of your <style> section or before </body> */
+
+/* Solid circular cursor with glowing silver shadow for all devices */
+html, body {
+  cursor: url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><defs><filter id="f1" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="55" dy="55" stdDeviation="5" flood-color="silver"/></filter></defs><circle cx="20" cy="20" r="10" fill="white" stroke="silver" stroke-width="2" filter="url(%23f1)"/></svg>') 20 20, auto !important;
+}
+
+/* Ensure hero text and buttons are always above overlays and clickable */
+.one-forth .text {
+  position: relative;
+  z-index: 10;
+}
+
+/* Make sure overlays do not block pointer events */
+.bg-image-container .overlay,
+.slider-item .overlay {
+  pointer-events: none;
+}
