@@ -26,30 +26,6 @@
 
 
 <style>
-p strong {
-  display: inline-block;           /* Allows transform effects */
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth scaling and color */
-  cursor: default;                 /* Normal pointer */
-  color: #888;                     /* Default muted silver-gray */
-}
-
-p strong:hover {
-  transform: scale(1.1);           /* Scale up by 10% */
-  color: silver;                   /* Silver highlight on hover */
-  text-shadow: 0 0 6px silver;    /* Optional soft silver glow */
-}
-
-	.big.big-2 {
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Hover effect: scale + change color */
-.big.big-2:hover {
-  color: #ff6e40;   
-     /* highlight color */
-  transform: scale(1.15); /* 10% bigger */
-}
 
 
     .skill-mf {
@@ -81,8 +57,35 @@ p strong:hover {
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
       border-color: silver;
     }
-  
+ 
+
+
 	
+p strong {
+  display: inline-block;           /* Allows transform effects */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth scaling and color */
+  cursor: default;                 /* Normal pointer */
+  color: #888;                     /* Default muted silver-gray */
+}
+
+p strong:hover {
+  transform: scale(1.1);           /* Scale up by 10% */
+  color: silver;                   /* Silver highlight on hover */
+  text-shadow: 0 0 6px silver;    /* Optional soft silver glow */
+}
+
+	.big.big-2 {
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect: scale + change color */
+.big.big-2:hover {
+  color: #ff6e40;   
+     /* highlight color */
+  transform: scale(1.15); /* 10% bigger */
+}
+
 /* Base H2 Styling */
 h2.mb-4 {
   transition: color 0.3s ease,
@@ -895,7 +898,7 @@ button.navbar-toggler,
               </div>
 
               <div class="col-sm-6 col-md-7">
-                <div >
+                <div class="about-info">
                   <p><span class="title-s">Name:</span> <strong>Mohd Rizwan Khan</strong></p>
                   <p><span class="title-s">Job Role:</span> <strong>Data Analyst Intern</strong></p>
                   <p><span class="title-s">Experience:</span> <strong>Six Months</strong></p>
@@ -904,9 +907,8 @@ button.navbar-toggler,
               </div>
             </div>
 
-         
- <p class="title-s"><strong>Skills</strong></p>
-
+            
+<p class="title-s"><strong>Skills</strong></p>
     
     <span class="skill-badge">Advanced Excel</span>
     <span class="skill-badge">SQL</span>
@@ -917,10 +919,7 @@ button.navbar-toggler,
     <span class="skill-badge">Data Visualization</span>
     <span class="skill-badge">Data Cleaning</span>
   </div>
-
-          </div>
-        </div>
-      </div>
+        
 
       <!-- Right Column (About Content) -->
       <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
